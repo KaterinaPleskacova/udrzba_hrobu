@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihlášení | Pečujeme o hroby</title>
+</head>
+<body>
+    <div class=""wrapper>
+        <header>
+            <a href="index.html">Zpět na úvodní stránku</a>
+            <h1>Přihlášení</h1>
+        </header>
+
+        <main>
+            <div class="message message--error">
+               Zadané údaje nejsou správné.<br><span class="open-dialog" data-dialog="forgotten-password">Zapomněli jste heslo?</span>
+            </div>
+            <div class="message message--success">
+               Akce proběhla úspěšně!
+            </div>
+            <form action="login.html" method="post">
+                <label for="email" class="input-label">Email:</label>
+                <input type="email" name="email" id="email" class="input" required>
+                <label for="password" class="input-label">Heslo:</label>
+                <input type="password" name="password" id="password" class="input" required>
+                <!--chtěla bych přidat zaškrtávací pole "Zapamatuj si mě"-->
+                <input type="submit" value="Vytvořit účet" class="button button--right">
+            </form>
+
+
+            <span class="panel-link">Jste u nás poprvé? <a href="#">Vytvořte si účet!</a></span><br>
+            <span class="panel-link"><a href="#" class="open-dialog" data-dialog="forgotten-password">Zapomenuté heslo?</a></span>
+         </main>  
+
+         <dialog id="forgotten-password" class="dialog">
+            <form action="forgotten-password.html" method="post">
+               <label for="email" class="input-label">Registrační email:</label>
+               <input type="email" name="email" id="reg-email" class="input" required>
+               <input type="submit" value="Obnovit zapomenuté heslo" class="button button--wide">
+            </form>
+         </dialog>
+    </div>
+
+    
+</body>
+</html>
