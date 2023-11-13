@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vytvořit účet | Pečujeme o hroby</title>
+    <title>Vytvořit účet | PEČUJEMEoHROBY.cz</title>
 </head>
 <body>
-    <div class=""wrapper>
+    <div class="wrapper">
         <header>
             <a href="index.html">Zpět na úvodní stránku</a>
             <h1>Vytvořit účet</h1>
         </header>
 
         <main>
+            <div class="message message--error">
+                Pod tímto emailem účet již existuje.<br>
+                <span class="open-dialog" data-dialog="forgotten-password">Zapomněli jste heslo?</span>
+             </div>
+             <div class="message message--success">
+                Akce proběhla úspěšně!
+             </div>
             <form action="register.html" method="post">
                 <label for="email" class="input-label">Email:</label>
                 <input type="email" name="email" id="email" class="input" required>
@@ -26,10 +33,17 @@
                 </label>
                 <input type="submit" value="Vytvořit účet" class="button button--right">
             </form>
+
+            <span class="panel-link">Máte účet? <a href="login.html">Přihlaste se!</a></span>
         </main>
 
-        <span class="panel-link">Máte účet? <a href="login.html">Přihlaste se!</a></span>
-        
+        <dialog id="forgotten-password" class="dialog">
+            <form action="forgotten-password.html" method="post">
+               <label for="email" class="input-label">Registrační email:</label>
+               <input type="email" name="email" id="reg-email" class="input" required>
+               <input type="submit" value="Obnovit zapomenuté heslo" class="button button--wide">
+            </form>
+         </dialog>
     </div>
 
     
