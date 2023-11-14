@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,41 +18,99 @@
           <a href="login.html" class="nav-bar">Můj účet</a>
       </nav>
       <div class="header-background"><!--obrázek vložím v CSS jako background-image-->
-         <h4>Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h4>
+         <h3 class="text-v-obrazku">Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h3>
       </div>
   </header>
   <main>
-   <h1>Služby a ceník</h1>
-   <div class="doplnujici-text">
-      <svg class="cara" width="6" height="126" viewBox="0 0 6 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <line x1="1.99993" y1="0.982759" x2="3.07747" y2="125.978" stroke="#31512B" stroke-width="4"/>
-      </svg>
-      <p>Zde najdete podrobnější informace o námi poskytovaných službách a jejich cenách. 
+      <h1 class="sluzby-header">Služby a ceník</h1>
+      <div class="doplnujici-text">
+         Zde najdete podrobnější informace o námi poskytovaných službách a jejich cenách. 
          Zaměřujeme se na čištění a údržbu hrobů a pomníků, zálivku a výměnu květin, osazení 
          svíček, váz a jiných dekorací a také úpravu okolního prostředí.
-      </p>
-   </div>
-   <section class="sluzby">
-      <h2>Jednorázová nebo pravidelná péče</h2>
-      <div class="doplnujici-text">
-         <svg class="cara" width="5" height="76" viewBox="0 0 5 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="1.99993" y1="0.982759" x2="2.64645" y2="75.98" stroke="#31512B" stroke-width="4"/>
-         </svg>
-         <p>Návštěva hrobu nebo památníku, kdy se zaměříme na základní úklid a péči. Během každé návštěvy 
+      </div>
+      <section class="sluzby">
+         <h2 class="sluzby-subheader">Jednorázová nebo pravidelná péče</h2>
+         <div class="doplnujici-text">
+            Návštěva hrobu nebo památníku, kdy se zaměříme na základní úklid a péči. Během každé návštěvy 
             od nás můžete očekávat tyto služby:
-         </p>
-      </div>
-      <div class="sluzby--seznam">
-         <svg class="sipka" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0L0 9Z" fill="black"/>
-         </svg>
-         <span class="text-sipka">Pečlivé zametení hrobu, odklizení listí nebo sněhu</span>
-
-      </div>
-            
-
-   </section>
+         </div>
+         <div class="sluzby-seznam">
+            <!--<svg class="sipka" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0L0 9Z" fill="black"/>
+            </svg>-->
+            <ul>
+               <li class="text-sipka">Pečlivé zametení hrobu, odklizení listí nebo sněhu</li>
+               <li class="text-sipka">Odstranění mechu, plevele, lišejníků a dalších nečistot</li>
+               <li class="text-sipka">Vyčištění a omytí hrobu, odstranění staré nepoužitelné výzdoby</li>
+               <li class="text-sipka">Dodání nové výzdoby, zapálení svíčky</li>
+               <li class="text-sipka">Tematické upravení hrobu (výročí, Velikonoce, Dušičky, Vánoce) dle Vašich přání  </li>
+               <li class="text-sipka">Fotodokumentaci provedené práce</li>
+            </ul>
+         </div>
+         <div class="sluzby-druh">
+            <h3 class="sluzby-h3">Jednorázová péče</h3>
+            <div class="doplnujici-text">
+               Úklid hrobu provedeme na svátky nebo vámi zvolené datum v plném rozsahu dle popisu výše.
+            </div>
+            <h3 class="sluzby-h3">Pravidelná péče</h3>
+            <div class="doplnujici-text">
+               Úklid hrobu provedeme na svátky nebo vámi zvolené datum v plném rozsahu dle popisu výše 
+               několikrát ročně.
+            </div>
+         </div>
+      </section>
+      <section>
+         <!--obrázek vložím přes CSS jako background této sekce-->
+         <h2 class="sluzby-subheader">Ceny našich služeb</h2>
+         <div class="text-ceny">
+            Ceník je platný pro Vysočinu, pro práci v ostatních regionech se náklady mohou lišit. Vaše individuální potřeby 
+            a přání jsou pro nás důležité, proto jsou tyto ceny pouze orientační a finální cena se může lišit. Pokud máte 
+            speciální požadavky na výzdobu nebo cokoliv dalšího, sdělte nám to, prosím, v objednávkovém formuláři.
+         </div>
+         <a href="register.html" class="chci-objednat">Chci objednat službu</a>
+         <div class="ctverce ctverce--vpravo">
+            <div class="ctverec ctverec--hnedy">  
+               <span class="text-ctverec">Jednorázová<br>péče<br>Urnový hrob: 650 Kč<br>
+                  Klasický hrob: 850 Kč<br>Dvoj hrob: 1 050 Kč
+               </span>
+           </div>
+           <div class="ctverec ctverec--hnedy">
+            <span class="text-ctverec">Pravidelná péče<br>(4 návštěvy ročně)<br>Urnový hrob: 2 080 Kč<br>
+               Klasický hrob: 2 720 Kč<br>Dvoj hrob: 3 360 Kč
+            </span> 
+           </div>
+           <div class="ctverec ctverec--hnedy">
+            <span class="text-ctverec">Pravidelná péče<br>(6 návštěv ročně)<br>Urnový hrob: 2 925 Kč<br>
+               Klasický hrob: 3 825 Kč<br>Dvoj hrob: 4 725 Kč
+            </span>  
+           </div>
+           <div class="ctverec ctverec--hnedy">
+               <span class="text-ctverec">Častější frekvence návštěv, speciální požadavky na výzdobu, 
+                  návštěva hřbitova mimo kraj Vysočina a další Vaše přání naceníme individuálně.</span>
+           </div>
+         </div>
+      </section>
   </main>
+
+  <footer>
+   <div class="footer-background">
+       <div class="footer-odkazy">
+           <h5>Důležité odkazy</h5>
+           <a href="#">Ochrana osobních údajů</a>
+           <a href="#">Podmínky použití</a>
+           <a href="#">Cookies</a>
+       </div>
+       <div class="footer-vpravo">
+           <h5>PEČUJEMEoHROBY.cz</h5>
+           <div class="footer-text">
+               Péči o hroby se věnujeme s úctou, pokorou a závazkem 
+               kvality ve všech koutech Vysočiny.
+           </div>
+       </div>
+       <span>©2023 pecujemeohroby.cz | Pečlivě se staráme o hroby, výzdobu i okolní prostředí
+            | PEČUJEMEoHROBY.cz, Jižní 1918, Havlíčkův Brod 580 01</span>
+   </div>
+</footer>
    
 </body>
 </html>
