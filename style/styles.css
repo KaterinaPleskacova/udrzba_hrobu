@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Judson:wght@400;700&display=swap');
+
+:root{
+   --background-color: #E3F4E0;
+   --primary-color: #31512B;
+
+   --font-color: #1A0D02;
+   --font-color-light: #E3F4E0;
+   --font-green: #1F8B0E;
+   --font-error: #F21010;
+
+   --rectangle-green: #31512B33;
+   --rectangle-brown: #1A0D0299;
+   --rectangle-light-green: #E3F4E080;
+   --drop-shadow: #00000080;
+
+   --background-brown-dark: #1A0D02CC;
+   --background-brown-light: #1A0D0233;
+   --background-green-light: #31512B33;
+
+   --gradient-dark: #1A0D02;
+   --gradient-light: #31512B;
+}
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+img{
+   max-width: 100%;
+}
+
+body, button, input, textarea {
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background: var(--background-color);
+   color: var(--font-color);
+   width: 100vw;
+   height: 100vh;
+}
+
+header{
+   margin:0;
+}
+
+{
+   margin-left: 8.75rem;
+   margin-right: 8.75rem;
+}
+
+/*navigace*/
+
+.main-nav {
+   position:sticky;
+   background: var(--primary-color);
+   width: 100%;
+   height: 4.8rem;
+   margin: 0;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+}
+
+.nav > a {
+      color:var(--font-color-light);
+      font-size: 1.5rem;
+      font: weight 500;
+      text-decoration: none;
+      letter-spacing: 0.0375rem;
+   }
+      
+      .nav > a:hover{
+         color: var(--font-color);
+      }
+
+   .nav-vlevo{
+      display:flex;
+      margin-top: 0.5rem;
+      align-items: center;
+      margin-left: 8.75rem;
+   }
+/*???????????????nastavit velikost loga, aby se nezmenšovalo*/
+   .logo-img{
+      width: 60px;
+      height: 60px;
+   }
+
+   .nav-vpravo{
+      display: flex;
+      margin-right: 8.75rem;
+      margin-top: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+   }
+
+
+/*index-velký text, popisek, obrázek anděla*/
+
+.sekce-prvni{
+   display:flex;
+   margin: 4.375rem 7rem;
+}   
+
+.sekce-vlevo{
+   display:flex;
+   flex-direction: column;
+}
+
+.maly-nadpis{
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.index-header{
+   font-family: 'Judson', serif;
+   font-size: 3.7rem;
+   font-weight: 700;
+   display: inline-block;
+   width: 30rem;
+   margin-bottom: 2rem;
+}
+
+.index-hlavni-text{
+   font-size: 1.75rem;
+   font-weight: 300;
+   line-height: 2rem;
+   display: inline-block;
+   width: 30rem;
+   margin-bottom: 2rem;
+}
+
+.doplnujici-text{
+   display: flex;
+   margin-left: 1.25rem;
+   line-height: 1.5rem;
+   align-items: center;
+}
+
+.cara{
+   margin-right: 1.25rem;
+}
+
+.index-doplnujici-text{
+   width: 23.75rem;
+   font-size: 1.5rem;
+   font-weight: 300;
+}
+
+.sekce-vpravo{
+   margin-left: 9.375rem;
+   margin-right: 8.75rem;
+   
+   .obrazek{
+      max-width: 33.125rem;
+      border-radius: 2.5rem;
+   }
+}
+
+/*index druhá sekce - čtverce vlevo, velký popis, call to action */
+
+.sekce-ctverce{
+   display: flex;
+   margin: 4.375rem 7rem;
+}
+
+   .ctverce-vlevo{
+      display:flex;
+      flex-wrap: wrap;
+      width: 34rem;
+      justify-content: space-around;
+   }
+
+      .prvni-rada, .druha-rada{
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .druha-rada{
+         margin-top: 2.75rem;
+      }
+
+      .ctverec{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 16.625rem;
+         height: 15.625rem;
+         background-color: var(--rectangle-green);
+         border-radius: 5rem;
+         margin-right: 2.75rem;
+      }
+
+      .ctverec:nth-child(2n) {
+         margin-right: 0;
+       }
+         .img-ctverec{
+            margin-top: 1.75rem;
+            margin-bottom: 2rem;
+         }
+
+         .text-ctverec{
+            display: inline-block;
+            text-align: center;
+            font-size: 1.375rem;
+            font-weight: 500;
+            line-height: 1.875rem;
+            width: 12.5rem;
+            margin-bottom: 1rem;
+         }
+   
+   .ctverce-vpravo{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5.375rem;
+   }
+      .index-subheader{
+         font-family: 'Judson', serif;
+         font-size: 3.125rem;
+         font-weight: 700;
+         display: inline-block;
+         width: 25rem;
+      }
+
+      .chci-objednat{
+         display: inline-block;
+         width: 25rem;
+         height: 3.875rem;
+         background-color: var(--primary-color);
+         border-radius: 1.875rem;
+         font-size: 1.875rem;
+         color: var(--font-color-light);
+         text-align: center;
+         margin-top: 4rem;
+         text-decoration: none;
+         padding-top: 1rem;
+         padding-bottom:1rem;
+
+      }
+
+/*sekce pruh s textem*/
+
+.sekce-pruh{
+   height: 21rem;
+   position: relative;
+   background-image: url('../assets/banner2.jpg');
+   background-size:cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+   .sekce-prusvitnost{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+   }
+
+   .text-v-obrazku{
+      width: 61.5rem;
+      text-align: center;
+      font-family: 'Judson', serif;
+      font-size: 2.5rem;
+      font-weight: 700; 
+      line-height: 3.125rem;
+      position:relative;
+      z-index: 1;
+      padding: 5rem 0;
+   }
+
+   /*sekce třetí, text s dalším popisem a obrázek muže*/
+
+   .sekce-spodni{
+      display: flex;
+      margin: 4.375rem 7rem;
+   }
+      .index-subheader--wide{
+         width: 36.25rem;
+         margin-bottom: 2rem;
+      }
+
+      .index-hlavni-text--wide{
+         width: 36.25rem;
+      }
+
+      .index-doplnujici-text--wide{
+         width: 30rem;
+         
+      }
+
+/*footer*/
+
+.footer-background{
+   background-color: var(--primary-color);
+   height: 12.875rem;
+}
+
+   h5{
+      color: var(--font-color-light);
+      font-family: 'Judson', serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom:0.5rem;
+   }
+
+   .footer-nahore{
+      display: flex;
+      margin-left: 7rem;
+      margin-right: 7rem;
+      gap: 33.5rem;
+      margin-bottom: 1.5rem;
+   }
+
+      .footer-odkazy{
+         display: inline-block;
+         font-weight: 300;
+         line-height: 1.875rem;
+         min-width: 12rem;
+      }
+
+         .footer-odkazy a{
+            text-decoration: none;
+            color: var(--font-color-light);
+         }
+
+         .footer-odkazy a:hover{
+            color:var(--font-color);
+            font-weight: 600;
+         }
+   
+      .footer-vpravo{
+         display: inline-block;
+         width: 16.5rem;
+         font-weight: 300;
+         line-height: 1.875rem;
+         color: var(--font-color-light);
+      }
+
+      .footer-dole{
+         text-align: center;
+         color: var(--font-color-light);
+         font-weight: 300;
+         
+      }
