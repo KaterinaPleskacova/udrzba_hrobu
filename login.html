@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Přihlášení | PEČUJEMEoHROBY.cz</title>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-    <div class="wrapper">
+<body class="form-background">
+    <div class="page-wrapper">
         <header>
-            <a href="index.html">Zpět na úvodní stránku</a>
-            <h1>Přihlášení</h1>
+            <a href="index.html" class="zpet">Zpět na úvodní stránku</a>
+            <h1 class="form-header">Přihlášení</h1>
         </header>
 
         <main>
@@ -18,7 +19,7 @@
                <span class="open-dialog" data-dialog="forgotten-password">Zapomněli jste heslo?</span>
             </div>
             <div class="message message--success">
-               Akce proběhla úspěšně!
+               Akce proběhla úspěšně!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
             </div>
             <form action="login.html" method="post">
                 <label for="email" class="input-label">Email:</label>
@@ -33,7 +34,6 @@
                 <input type="submit" value="Vytvořit účet" class="button button--right">
             </form>
 
-
             <span class="panel-link">Jste u nás poprvé? <a href="register.html">Vytvořte si účet!</a></span><br>
             <span class="panel-link"><a href="password-recovery.html" class="open-dialog" data-dialog="forgotten-password">Zapomenuté heslo?</a></span>
          </main>  
@@ -45,8 +45,7 @@
                <input type="submit" value="Obnovit zapomenuté heslo" class="button button--wide">
             </form>
          </dialog>
-    </div>
 
-    
+    </div>
 </body>
 </html>

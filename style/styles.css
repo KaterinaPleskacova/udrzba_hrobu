@@ -48,29 +48,21 @@ header{
    margin:0;
 }
 
-{
-   margin-left: 8.75rem;
-   margin-right: 8.75rem;
-}
-
-/*navigace*/
+/*navigace a background image pod navigací na některých stránkách*/
 
 .main-nav {
-   position:sticky;
    background: var(--primary-color);
    width: 100%;
    height: 4.8rem;
-   margin: 0;
-}
-
-nav {
+   position:sticky;
+   top:0;
    display: flex;
    justify-content: space-between;
 }
 
 .nav > a {
       color:var(--font-color-light);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font: weight 500;
       text-decoration: none;
       letter-spacing: 0.0375rem;
@@ -84,12 +76,14 @@ nav {
       display:flex;
       margin-top: 0.5rem;
       align-items: center;
-      margin-left: 8.75rem;
+      margin-left: 7rem;
    }
 /*???????????????nastavit velikost loga, aby se nezmenšovalo*/
    .logo-img{
-      width: 60px;
-      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      max-width: 60px;
+      max-height:60px;
    }
 
    .nav-vpravo{
@@ -102,12 +96,22 @@ nav {
 
    }
 
+.header-background{
+   background-image: url(../assets/banner.jpg);
+   height: 12.875rem;
+   position:relative;
+   background-size:cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 /*index-velký text, popisek, obrázek anděla*/
 
 .sekce-prvni{
    display:flex;
-   margin: 4.375rem 7rem;
+   margin-top: 4.375rem;
 }   
 
 .sekce-vlevo{
@@ -120,13 +124,17 @@ nav {
    font-weight: 600;
 }
 
-.index-header{
+.header{
    font-family: 'Judson', serif;
    font-size: 3.7rem;
    font-weight: 700;
    display: inline-block;
    width: 30rem;
    margin-bottom: 2rem;
+}
+
+.page-header{
+   margin-top: 4.5rem;
 }
 
 .index-hlavni-text{
@@ -140,36 +148,41 @@ nav {
 
 .doplnujici-text{
    display: flex;
-   margin-left: 1.25rem;
    line-height: 1.5rem;
    align-items: center;
+   width: 23.75rem;
+   font-size: 1.5rem;
+   font-weight: 300;
 }
 
 .cara{
    margin-right: 1.25rem;
 }
 
-.index-doplnujici-text{
-   width: 23.75rem;
-   font-size: 1.5rem;
-   font-weight: 300;
+.page-doplnujici-text{
+   width: 55.25rem;
 }
 
 .sekce-vpravo{
    margin-left: 9.375rem;
    margin-right: 8.75rem;
+}
    
    .obrazek{
       max-width: 33.125rem;
       border-radius: 2.5rem;
    }
-}
+
+   .sekce-vpravo-dole{
+      margin-left: 3.125rem;
+   }
 
 /*index druhá sekce - čtverce vlevo, velký popis, call to action */
 
 .sekce-ctverce{
    display: flex;
-   margin: 4.375rem 7rem;
+   margin-top: 4.375rem;
+   margin-bottom: 4.375rem;
 }
 
    .ctverce-vlevo{
@@ -280,12 +293,17 @@ nav {
       padding: 5rem 0;
    }
 
-   /*sekce třetí, text s dalším popisem a obrázek muže*/
+   .text-v-obrazku--narrow{
+      width: 42.375rem;
+   }
+
+/*sekce třetí, text s dalším popisem a obrázek muže*/
 
    .sekce-spodni{
       display: flex;
-      margin: 4.375rem 7rem;
+      margin-top: 4.375rem;
    }
+
       .index-subheader--wide{
          width: 36.25rem;
          margin-bottom: 2rem;
@@ -295,9 +313,8 @@ nav {
          width: 36.25rem;
       }
 
-      .index-doplnujici-text--wide{
+      .doplnujici-text--wide{
          width: 30rem;
-         
       }
 
 /*footer*/
@@ -320,7 +337,7 @@ nav {
       display: flex;
       margin-left: 7rem;
       margin-right: 7rem;
-      gap: 33.5rem;
+      gap: 27.125rem;
       margin-bottom: 1.5rem;
    }
 
@@ -352,6 +369,73 @@ nav {
       .footer-dole{
          text-align: center;
          color: var(--font-color-light);
-         font-weight: 300;
-         
+         font-weight: 300; 
       }
+
+/*sluzby a cenik*/
+
+.page-wrapper{
+   margin: 4.5rem 7rem;
+}
+
+   .page-header{
+      margin:0;
+   }
+
+   .page-doplnujici-text{
+      margin-top: 2rem;
+      margin-left: 1.25rem;
+   }
+
+   .sluzby-subheader{
+      font-family: 'Judson', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 3.5rem;
+   }
+
+   .sluzby-seznam{
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.5rem;
+   }
+
+
+
+
+
+/*login, register, nova objednávka, password recovery*/
+
+.form-background{
+   background: linear-gradient(180deg, #31512B 0%, #1A0D02 100%);
+   
+}
+
+   .zpet{
+      color: var(--font-color-light);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 400;
+      display: inline-block;
+      height:1.5rem;
+   }
+
+   .zpet:hover{
+      font-size: 1.125rem;
+      font-weight:300;
+   }
+
+   .form-header{
+      color:var(--font-green);
+      font-size: 3.125rem;
+      font-weight: 700;
+      text-shadow: 0 0.25rem 0.25rem var(--drop-shadow);
+      text-align: center;
+      margin-top: 6.75rem;
+   }
+
+   .message{
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 300;
+   }

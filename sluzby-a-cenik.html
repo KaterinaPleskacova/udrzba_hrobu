@@ -4,33 +4,41 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Služby a ceník | PEČUJEMEoHROBY.cz</title>
+   <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
    <header>
-      <nav>
-          <a href="index.html"><img src="assets/logo.png" alt="logo společnosti / jednoduchá kresba hřbitova"></a>
-          
-          <a href="index.html">PEČUJEMEoHROBY.cz</a>
-          <a href="sluzby-a-cenik.html" class="nav-bar">Služby a Ceník</a>
-          <a href="jak-to-funguje.html" class="nav-bar">Jak to funguje</a>
-          <a href="galerie.html" class="nav-bar">Galerie</a>
-          <a href="kontakt" class="nav-bar">Kontakt</a>
-          <a href="login.html" class="nav-bar">Můj účet</a>
+      <nav class="main-nav">
+          <div class="nav nav-vlevo">
+              <a href="index.html"><img src="assets/logo-pruhledne.png" alt="logo společnosti / jednoduchá kresba hřbitova" class="logo-img"></a>
+              <a href="index.html">PEČUJEMEoHROBY.cz</a>
+          </div>
+          <div class="nav nav-vpravo">
+              <a href="sluzby-a-cenik.html" class="nav-bar">Služby a Ceník</a>
+              <a href="jak-to-funguje.html" class="nav-bar">Jak to funguje</a>
+              <a href="galerie.html" class="nav-bar">Galerie</a>
+              <a href="kontakt" class="nav-bar">Kontakt</a>
+              <a href="login.html" class="nav-bar">Můj účet</a>
+          </div>
       </nav>
       <div class="header-background"><!--obrázek vložím v CSS jako background-image-->
-         <h3 class="text-v-obrazku">Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h3>
+         <div class="sekce-prusvitnost">
+         </div>
+         <h3 class="text-v-obrazku text-v-obrazku--narrow">Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h3>
       </div>
   </header>
+
   <main>
-      <h1 class="sluzby-header">Služby a ceník</h1>
-      <div class="doplnujici-text">
+   <div class="page-wrapper">
+      <h1 class="header page-header">Služby a ceník</h1>
+      <div class="doplnujici-text page-doplnujici-text">
          Zde najdete podrobnější informace o námi poskytovaných službách a jejich cenách. 
          Zaměřujeme se na čištění a údržbu hrobů a pomníků, zálivku a výměnu květin, osazení 
          svíček, váz a jiných dekorací a také úpravu okolního prostředí.
       </div>
       <section class="sluzby">
          <h2 class="sluzby-subheader">Jednorázová nebo pravidelná péče</h2>
-         <div class="doplnujici-text">
+         <div class="doplnujici-text page-doplnujici-text">
             Návštěva hrobu nebo památníku, kdy se zaměříme na základní úklid a péči. Během každé návštěvy 
             od nás můžete očekávat tyto služby:
          </div>
@@ -90,25 +98,30 @@
            </div>
          </div>
       </section>
+   </div>
   </main>
 
   <footer>
    <div class="footer-background">
-       <div class="footer-odkazy">
-           <h5>Důležité odkazy</h5>
-           <a href="#">Ochrana osobních údajů</a>
-           <a href="#">Podmínky použití</a>
-           <a href="#">Cookies</a>
-       </div>
-       <div class="footer-vpravo">
-           <h5>PEČUJEMEoHROBY.cz</h5>
-           <div class="footer-text">
-               Péči o hroby se věnujeme s úctou, pokorou a závazkem 
-               kvality ve všech koutech Vysočiny.
+       <div class="footer-nahore">
+           <div class="footer-odkazy">
+               <h5>Důležité odkazy</h5>
+               <a href="#">Ochrana osobních údajů</a><br>
+               <a href="#">Podmínky použití</a><br>
+               <a href="#">Cookies</a>
+           </div>
+           <div class="footer-vpravo">
+               <h5>PEČUJEMEoHROBY.cz</h5>
+               <div class="footer-text">
+                   Péči o hroby se věnujeme s úctou, pokorou a závazkem 
+                   kvality ve všech koutech Vysočiny.
+               </div>
            </div>
        </div>
-       <span>©2023 pecujemeohroby.cz | Pečlivě se staráme o hroby, výzdobu i okolní prostředí
-            | PEČUJEMEoHROBY.cz, Jižní 1918, Havlíčkův Brod 580 01</span>
+       <div class="footer-dole">
+           <span >©2023 pecujemeohroby.cz | Pečlivě se staráme o hroby, výzdobu i okolní prostředí
+               | PEČUJEMEoHROBY.cz, Jižní 1918, Havlíčkův Brod 580 01</span>
+       </div>
    </div>
 </footer>
    
