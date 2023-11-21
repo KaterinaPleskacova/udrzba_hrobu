@@ -14,6 +14,7 @@
    --rectangle-brown: #1A0D0299;
    --rectangle-light-green: #E3F4E080;
    --drop-shadow: #00000080;
+   --button-green: #1F8B0E;
 
    --background-brown-dark: #1A0D02CC;
    --background-brown-light: #1A0D0233;
@@ -416,13 +417,12 @@ header{
       text-decoration: none;
       font-size: 1rem;
       font-weight: 400;
-      display: inline-block;
-      height:1.5rem;
    }
 
+
    .zpet:hover{
-      font-size: 1.125rem;
-      font-weight:300;
+      text-decoration: underline;
+
    }
 
    .form-header{
@@ -439,3 +439,103 @@ header{
       text-align: center;
       font-weight: 300;
    }
+
+      .message--error{
+         color:var(--font-error);
+      }
+
+      .message--success{
+         color: var(--font-green)
+      }
+
+   .form{
+      display: flex;
+      flex-direction: column;
+      width: 23.625rem;
+      margin: 1rem auto 0 auto;
+   }
+
+
+   .input-label, .checkbox-label{
+      margin-top: 2rem;
+      color: var(--font-color-light);
+      font-size: 1.5rem;
+      font-weight: 300;
+      
+      &:first-child{
+         margin-top: 0;
+      }
+   }
+
+   .input{
+      margin-top: 0.5rem;
+      border-radius: 0.625rem;
+      background: var(--background-color);
+      font-size: 1.125rem;
+      color: var(--font-color);
+      padding: 0.825rem 0.5rem 0.5rem 0.5rem;
+      border: 0;
+   }
+
+   .checkbox-label{
+      display: flex;
+      gap: 0.5rem;
+      margin: 2rem auto 1rem auto;
+      font-size: 1rem;
+      cursor: pointer;
+   }
+
+   .checkbox{
+      width: 0.875rem;
+      height: 0.875rem;
+      border: 0;
+      background: var(--background-color);
+      cursor: pointer;
+
+   }
+
+   .link{
+      color:var(--font-green);
+      text-decoration: none;
+
+      &:hover{
+         text-decoration:underline;
+      }
+   }
+
+   .button{  
+      border-radius: 1.875rem;
+      background: var(--button-green);
+      font-size: 1.25rem;
+      color: var(--font-color);
+      padding: 0.875rem 2.75rem;
+      font-weight: 600;
+      border: 0;
+      cursor:pointer;
+   }
+
+   .button--center{
+      align-self: center;
+   }
+
+   .button--center-with-margin{
+      margin-top: 3.5rem;
+   }
+
+   .under-form-links{
+      margin: 3.5rem auto 16.5rem auto;
+      text-align: center;
+   }
+
+      .panel-link{
+         display: inline-block;
+         margin-top: 1rem;
+         color: var(--font-color-light);
+         font-size: 1rem;
+         font-weight: 400;
+      }
+
+
+
+      
+
