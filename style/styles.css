@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Judson:wght@400;700&display=swap');
+
+:root{
+   --background-color: #E3F4E0;
+   --primary-color: #31512B;
+
+   --font-color: #1A0D02;
+   --font-color-light: #E3F4E0;
+   --font-green: #1F8B0E;
+   --font-error: #F21010;
+
+   --rectangle-green: #31512B33;
+   --rectangle-brown: #1A0D0299;
+   --rectangle-light-green: #E3F4E080;
+   --drop-shadow: #00000080;
+   --button-green: #1F8B0E;
+
+   --background-brown-dark: #1A0D02CC;
+   --background-brown-light: #1A0D0233;
+   --background-green-light: #31512B33;
+
+   --gradient-dark: #1A0D02;
+   --gradient-light: #31512B;
+}
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+img{
+   max-width: 100%;
+}
+
+body, button, input, textarea {
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background: var(--background-color);
+   color: var(--font-color);
+   width: 100vw;
+   height: 100vh;
+}
+
+header{
+   margin:0;
+}
+
+
+.center-page-content{
+   width: 72.5rem;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+/*navigace a background image pod navigací na některých stránkách*/
+
+.main-nav {
+   background: var(--primary-color);
+   width: 100%;
+   height: 4.8rem;
+   position:sticky;
+   top:0;
+
+
+   .nav-wrapper{
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+.nav > a {
+      color:var(--font-color-light);
+      font-size: 1.25rem;
+      font: weight 500;
+      text-decoration: none;
+      letter-spacing: 0.0375rem;
+   }
+      
+      .nav > a:hover{
+         color: var(--font-color);
+      }
+
+   .nav-vlevo{
+      display:flex;
+      margin-top: 0.5rem;
+      align-items: center;
+   }
+/*???????????????nastavit velikost loga, aby se nezmenšovalo*/
+   .logo-img{
+      min-width: 60px;
+      min-height: 60px;
+      max-width: 60px;
+      max-height:60px;
+   }
+
+   .nav-vpravo{
+      display: flex;
+      margin-top: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+   }
+
+.header-background{
+   background-image: url('../assets/banner.jpg');
+   height: 12.875rem;
+   position:relative;
+   background-size:cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/*index-velký text, popisek, obrázek anděla*/
+
+.sekce-prvni{
+   display:flex;
+   margin-top: 4.375rem;
+}   
+
+.sekce-vlevo{
+   display:flex;
+   flex-direction: column;
+}
+
+.maly-nadpis{
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.header{
+   font-family: 'Judson', serif;
+   font-size: 3.7rem;
+   font-weight: 700;
+   display: inline-block;
+   width: 30rem;
+   margin-bottom: 2rem;
+}
+
+.header-with-padding{
+   padding-top: 9.25rem;
+}
+
+.index-hlavni-text{
+   font-size: 1.75rem;
+   font-weight: 300;
+   line-height: 2rem;
+   display: inline-block;
+   width: 30rem;
+   margin-bottom: 2rem;
+}
+
+.doplnujici-text{
+   display: flex;
+   line-height: 1.5rem;
+   align-items: center;
+   width: 23.75rem;
+   font-size: 1.5rem;
+   font-weight: 300;
+}
+
+.cara{
+   margin-right: 1.25rem;
+}
+
+.page-doplnujici-text{
+   width: 55.25rem;
+}
+
+.sekce-vpravo{
+   margin-left: 9.375rem;
+   margin-right: 8.75rem;
+}
+   
+   .obrazek{
+      max-width: 33.125rem;
+      border-radius: 2.5rem;
+   }
+
+   .sekce-vpravo-dole{
+      margin-left: 3.125rem;
+   }
+
+/*index druhá sekce - čtverce vlevo, velký popis, call to action */
+
+.sekce-ctverce{
+   display: flex;
+   margin-top: 4.375rem;
+   margin-bottom: 4.375rem;
+}
+
+   .ctverce-vlevo{
+      display:flex;
+      flex-wrap: wrap;
+      width: 34rem;
+      justify-content: space-around;
+   }
+
+      .prvni-rada, .druha-rada{
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .druha-rada{
+         margin-top: 2.75rem;
+      }
+
+      .ctverec, .ctverec--no-margin{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 16.625rem;
+         height: 15.625rem;
+         background-color: var(--rectangle-green);
+         border-radius: 5rem;
+         margin-right: 2.75rem;
+      }
+
+      .ctverec:nth-child(2n) {
+         margin-right: 0;
+       }
+
+         .img-ctverec{
+            margin-top: 1.75rem;
+            margin-bottom: 2rem;
+         }
+
+         .text-ctverec{
+            display: inline-block;
+            text-align: center;
+            font-size: 1.375rem;
+            font-weight: 500;
+            line-height: 1.875rem;
+            width: 12.5rem;
+            margin-bottom: 1rem;
+         }
+
+      .ctverec-hnedy{
+         background-color: var(--rectangle-brown);
+         color: var(--font-color-light);
+
+         .hnedy-nadpis{
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            letter-spacing: 0.06rem;
+            display: inline-block;
+            margin-top: 2.62rem;
+            margin-bottom: 1rem;
+         }
+
+         .hnedy-text{
+            font-size: 1.375rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+            display: inline-block;
+            width: 14.375rem;
+            text-align: center;
+            
+         }
+
+         .hnedy-posledni{
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            display: inline-block;
+            margin-top: 2.62rem;
+            width: 14.375rem;
+         }
+      }
+
+      .ctverec-svetly{
+         background: rgba(227, 244, 224, 0.50);
+         display: flex;
+         justify-content: center;
+         margin-right: 2.75rem;
+         align-items: center;
+         
+      }
+
+   .text-ctverec-hnedy{
+      width: 14.375rem;
+   }
+   
+   .ctverce-vpravo{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5.375rem;
+      margin-top: 8rem;
+   }
+   .index-subheader{
+      font-family: 'Judson', serif;
+      font-size: 3.125rem;
+      font-weight: 700;
+      display: inline-block;
+      width: 25rem;
+   }
+
+   .chci-objednat{
+      display: inline-block;
+      width: 25rem;
+      height: 3.875rem;
+      background-color: var(--primary-color);
+      border-radius: 1.875rem;
+      font-size: 1.875rem;
+      color: var(--font-color-light);
+      text-align: center;
+      margin-top: 4rem;
+      text-decoration: none;
+      padding-top: 1rem;
+      padding-bottom:1rem;
+
+   }
+
+   .chci-objednat-with-margin{
+      margin-top: 4.75rem;
+      margin-bottom: 9rem;
+   }
+
+   .chci-objednat-with-small-margin{
+      margin-top: 3.5rem;
+      margin-bottom: 2.75rem;
+      
+   }
+
+   .call-to-action{
+      text-align: center;
+   }
+
+/*sekce pruh s textem*/
+
+.sekce-pruh{
+   height: 21rem;
+   position: relative;
+   background-image: url('../assets/banner2.jpg');
+   background-size:cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+   .sekce-prusvitnost{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+   }
+
+   .text-v-obrazku{
+      width: 61.5rem;
+      text-align: center;
+      font-family: 'Judson', serif;
+      font-size: 2.5rem;
+      font-weight: 700; 
+      line-height: 3.125rem;
+      position:relative;
+      z-index: 1;
+      padding: 5rem 0;
+   }
+
+   .text-v-obrazku--narrow{
+      width: 42.375rem;
+   }
+
+/*sekce třetí, text s dalším popisem a obrázek muže*/
+
+   .sekce-spodni{
+      display: flex;
+      margin-top: 4.375rem;
+   }
+
+      .index-subheader--wide{
+         width: 36.25rem;
+         margin-bottom: 2rem;
+      }
+
+      .index-hlavni-text--wide{
+         width: 36.25rem;
+      }
+
+      .doplnujici-text--wide{
+         width: 30rem;
+      }
+
+      .sekce-spodni--cenik{
+         margin-top: 3.5rem;
+      }
+
+/*footer*/
+
+.footer-background{
+   background-color: var(--primary-color);
+   height: 12.875rem;
+}
+
+   h5{
+      color: var(--font-color-light);
+      font-family: 'Judson', serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom:0.5rem;
+   }
+
+   .footer-nahore{
+      display: flex;
+      gap: 27.125rem;
+      margin-bottom: 1.5rem;
+   }
+
+      .footer-odkazy{
+         display: inline-block;
+         font-weight: 300;
+         line-height: 1.875rem;
+         min-width: 12rem;
+      }
+
+         .footer-odkazy a{
+            text-decoration: none;
+            color: var(--font-color-light);
+         }
+
+         .footer-odkazy a:hover{
+            color:var(--font-color);
+            font-weight: 600;
+         }
+   
+      .footer-vpravo{
+         display: inline-block;
+         width: 16.5rem;
+         font-weight: 300;
+         line-height: 1.875rem;
+         color: var(--font-color-light);
+      }
+
+      .footer-dole{
+         text-align: center;
+         color: var(--font-color-light);
+         font-weight: 300; 
+      }
+
+/*sluzby a cenik*/
+
+.page-wrapper{
+   margin: 2rem auto;
+}
+
+   .page-header{
+      margin: 0;
+   }
+
+   .page-doplnujici-text{
+      margin-top: 2rem;
+      margin-left: 1.25rem;
+   }
+
+   .subheader{
+      font-family: 'Judson', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 3.5rem;
+      margin-bottom: 2rem;
+   }
+
+   .sluzby-seznam{
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.5rem;
+      margin-top: 2rem;
+
+      > ul{
+         list-style-type: none;
+         margin-left: 6.25rem;
+         padding-left: 1.5rem;
+      }
+
+      .custom-arrow li::before{
+         content: "\2192";
+         margin-right: 0.875rem;
+         color: var(--font-color);
+      }
+   }
+
+   .sluzby-druh{
+      margin-top: 3.5rem;
+
+      .sluzby-h3{
+         font-family: 'Judson', serif;
+         font-size: 2rem;
+         font-weight: 700;
+         margin-top: 3.5rem;
+      }
+
+   }
+
+   .pruh-cenik{
+      background-color: rgba(255, 255, 255, 0.5);
+      background-image: url('../assets/ruka-v-hline-1440x762.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: lighten;
+      display: flex;
+   }
+
+   .text-ceny{
+      
+      flex-direction: column;
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 2.25rem;
+      width: 31rem;
+   }
+
+/*jak to funguje*/
+
+.jak-to-funguje-wrapper{
+   background-image: url(../assets/red-candle-4328867_1280.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: rgba(255, 255, 255, 0.5);
+   background-blend-mode: lighten;
+}
+
+.ctverce{
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.header--small-margin{
+   margin-top: 2rem;
+}
+
+
+/*galerie*/
+
+.fotky-prace{
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 3.5rem;
+   width: 60rem;
+   margin: 3.5rem auto 2rem auto;
+}
+
+.fotky-prace > img {
+   box-shadow: 0.5rem 0.5rem 0.5rem 0 var(--rectangle-brown);
+ }
+
+
+/*kontakt*/
+
+.kontakt-main{
+   display: flex;
+}
+
+.subheader--kontakt{
+   color: #1A0D02;
+   text-align: center;
+   font-family: 'Judson', serif;
+   font-size: 2rem;
+   font-weight: 700;
+   margin-top: 3.875rem;
+}
+
+.kontaktni-info{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.kontakt{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 2rem;
+   margin-left: 1.5rem;
+}
+
+.icon-text{
+   font-size: 1.5rem;
+   font-weight: 300;
+   line-height: 1.75rem;
+}
+
+/*login, register, nova objednávka, password recovery*/
+
+.form-background{
+   background: linear-gradient(180deg, #31512B 0%, #1A0D02 100%);
+   
+}
+
+   .zpet{
+      color: var(--font-color-light);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 400;
+   }
+
+
+   .zpet:hover{
+      text-decoration: underline;
+
+   }
+
+   .form-header{
+      color:var(--font-green);
+      font-size: 3.125rem;
+      font-weight: 700;
+      text-shadow: 0 0.25rem 0.25rem var(--drop-shadow);
+      text-align: center;
+      margin-top: 6.75rem;
+   }
+
+   .message{
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 300;
+   }
+
+      .message--error{
+         color:var(--font-error);
+      }
+
+      .message--success{
+         color: var(--font-green)
+      }
+
+   .form{
+      display: flex;
+      flex-direction: column;
+      width: 23.625rem;
+      margin: 1rem auto 0 auto;
+   }
+
+   .kontaktni-formular{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .kontakt-form{
+      display: flex;
+      flex-direction: column;
+      margin: 1rem auto 0 auto;
+   }
+
+   .input-label, .checkbox-label{
+      margin-top: 2rem;
+      color: var(--font-color-light);
+      font-size: 1.5rem;
+      font-weight: 300;
+      
+      &:first-child{
+         margin-top: 0;
+      }
+   }
+
+   .input-label--dark{
+      color:var(--font-color);
+   }
+
+   .input{
+      margin-top: 0.5rem;
+      border-radius: 0.625rem;
+      background: var(--background-color);
+      font-size: 1.125rem;
+      color: var(--font-color);
+      padding: 0.825rem 0.5rem 0.5rem 0.5rem;
+      border: 0;
+   }
+
+   .input-light{
+      background-color: #ffffff;
+   }
+
+   .checkbox-label{
+      display: flex;
+      gap: 0.5rem;
+      margin: 2rem auto 1rem auto;
+      font-size: 1rem;
+      cursor: pointer;
+   }
+
+   .checkbox{
+      width: 0.875rem;
+      height: 0.875rem;
+      border: 0;
+      background: var(--background-color);
+      cursor: pointer;
+
+   }
+
+   .link{
+      color:var(--font-green);
+      text-decoration: none;
+
+      &:hover{
+         text-decoration:underline;
+      }
+   }
+
+   .button{  
+      border-radius: 1.875rem;
+      background: var(--button-green);
+      font-size: 1.25rem;
+      color: var(--font-color);
+      padding: 0.875rem 2.75rem;
+      font-weight: 600;
+      border: 0;
+      cursor:pointer;
+   }
+
+   .button--center{
+      align-self: center;
+   }
+
+   .button--center-with-margin{
+      margin-top: 3.5rem;
+   }
+
+   .button--right{
+      align-self: flex-end;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      background-color: var(--primary-color);
+      color: var(--font-color-light)
+   }
+
+
+   .under-form-links{
+      margin: 2.5rem auto 16.5rem auto;
+      text-align: center;
+   }
+
+      .panel-link{
+         display: inline-block;
+         margin-top: 1rem;
+         color: var(--font-color-light);
+         font-size: 1rem;
+         font-weight: 400;
+      }
+
+
+
+      
+
