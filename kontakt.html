@@ -31,7 +31,7 @@
    </header>
 
   <main class="center-page-content kontakt-main">
-      <section class="kontaktni-info">
+      <section>
          <h1 class="subheader">Máte jakýkoli dotaz? Napište nám, nebo zavolejte.</h1>
          <div class="kontakt-detail">
             <div class="kontakt">
@@ -68,20 +68,20 @@
          </div>
       </section>
    
-   <section class="kontaktni-formular">
-      <h3 class="nadpis-h3">Formulář pro rychlý kontakt</h3>
-      <form action="kontakt.html" method="post">
-         <label for="name" class="input-label">Vaše jméno</label>
-         <input type="text" name="name" id="name" class="input" required>
-         <label for="email" class="input-label">Váš email</label>
-         <input type="email" name="email" id="email-kontakt" class="input" required>
-         <label for="zprava" class="input-label">Zpráva pro nás</label>
-         <textarea id="zprava" name="message" rows="10"></textarea>
-         <input type="submit" value="Odeslat" class="button button--right">
-      </form>
+      <section class="kontaktni-formular">
+         <h3 class="nadpis-h3 nadpis-h3--center">Formulář pro rychlý kontakt</h3>
+         <form action="kontakt.html" method="post" class="form">
+            <label for="name" class="input-label input-label--dark">Vaše jméno</label>
+            <input type="text" name="name" id="name" class="input input--white" required>
+            <label for="email" class="input-label input-label--dark">Váš email</label>
+            <input type="email" name="email" id="email-kontakt" class="input input--white" required>
+            <label for="zprava" class="input-label input-label--dark">Zpráva pro nás</label>
+            <textarea id="zprava" name="message" rows="10" class="input input--white"></textarea>
+            <input type="submit" value="Odeslat" class="button button--right">
+         </form>
 
-   </section>
-  </main>
+      </section>
+   </main>
 
    <footer class="footer-background ">
       <div class="center-page-content">

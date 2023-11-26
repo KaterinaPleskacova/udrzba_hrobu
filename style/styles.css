@@ -500,6 +500,10 @@ header{
       margin-top: 3.5rem;
    }
 
+   .nadpis-h3--center{
+      text-align: center;
+   }
+
    .pruh-cenik{
       background-color: rgba(255, 255, 255, 0.5);
       background-image: url('../assets/ruka-v-hline-1440x762.jpg');
@@ -569,6 +573,12 @@ header{
    margin-bottom: 2rem;
 }
 
+.ikona-text{
+   font-size: 1.5rem;
+   font-weight: 300;
+   line-height: 1.75rem;
+}
+
 
 /*login, register, nova objednávka, password recovery*/
 
@@ -620,6 +630,8 @@ header{
       margin: 1rem auto 0 auto;
    }
 
+   .form--dark
+
 
    .input-label, .checkbox-label{
       margin-top: 2rem;
@@ -632,6 +644,14 @@ header{
       }
    }
 
+   .input-label--dark{
+      color: var(--font-color);
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-top: 1rem;
+   }
+      
+
    .input{
       margin-top: 0.5rem;
       border-radius: 0.625rem;
@@ -640,6 +660,11 @@ header{
       color: var(--font-color);
       padding: 0.825rem 0.5rem 0.5rem 0.5rem;
       border: 0;
+   }
+
+   .input--white{
+      background: #ffffff;
+      border: 0.125rem solid var(--primary-color);
    }
 
    .checkbox-label{
@@ -685,6 +710,14 @@ header{
 
    .button--center-with-margin{
       margin-top: 3.5rem;
+   }
+
+   .button--right{
+      align-self: flex-end;
+      margin-top: 2rem;
+      margin-bottom: 3.5rem;
+      color: var(--font-color-light);
+      background: var(--primary-color);
    }
 
    .under-form-links{
