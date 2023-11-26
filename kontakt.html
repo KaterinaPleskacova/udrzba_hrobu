@@ -8,20 +8,28 @@
 </head>
 <body>
    <header>
-      <nav>
-          <a href="index.html"><img src="assets/logo.png" alt="logo společnosti / jednoduchá kresba hřbitova"></a>
-          
-          <a href="index.html">PEČUJEMEoHROBY.cz</a>
-          <a href="sluzby-a-cenik.html" class="nav-bar">Služby a Ceník</a>
-          <a href="jak-to-funguje.html" class="nav-bar">Jak to funguje</a>
-          <a href="galerie.html" class="nav-bar">Galerie</a>
-          <a href="kontakt.html" class="nav-bar">Kontakt</a>
-          <a href="login.html" class="nav-bar">Můj účet</a>
-      </nav>
+      <nav class="main-nav">
+         <div class="nav-wrapper center-page-content">
+             <div class="nav nav-vlevo">
+                 <a href="index.html"><img src="assets/logo-pruhledne.png" alt="logo společnosti / jednoduchá kresba hřbitova" class="logo-img"></a>
+                 <a href="index.html">PEČUJEMEoHROBY.cz</a>
+             </div>
+             <div class="nav nav-vpravo">
+                 <a href="sluzby-a-cenik.html" class="nav-bar">Služby a Ceník</a>
+                 <a href="jak-to-funguje.html" class="nav-bar">Jak to funguje</a>
+                 <a href="galerie.html" class="nav-bar">Galerie</a>
+                 <a href="kontakt.html" class="nav-bar">Kontakt</a>
+                 <a href="login.html" class="nav-bar">Můj účet</a>
+             </div>
+         </div>
+     </nav>
       <div class="header-background"><!--obrázek vložím v CSS jako background-image-->
-         <h3 class="text-v-obrazku">Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h3>
+         <div class="sekce-prusvitnost">
+         </div>
+         <h3 class="text-v-obrazku text-v-obrazku--narrow">Pečlivě se staráme o hroby, výzdobu i okolní prostředí.</h3>
       </div>
-  </header>
+   </header>
+
   <main>
    <section class="kontaktni-info">
       <h1 class="nadpis-kontakt">Máte jakýkoli dotaz? Napište nám, nebo zavolejte.</h1>
@@ -71,26 +79,28 @@
 
    </section>
   </main>
-   
 
-
-   <footer>
-      <div class="footer-background">
-          <div class="footer-odkazy">
-              <h5>Důležité odkazy</h5>
-              <a href="#">Ochrana osobních údajů</a>
-              <a href="#">Podmínky použití</a>
-              <a href="#">Cookies</a>
-          </div>
-          <div class="footer-vpravo">
-              <h5>PEČUJEMEoHROBY.cz</h5>
-              <div class="footer-text">
-                  Péči o hroby se věnujeme s úctou, pokorou a závazkem 
-                  kvality ve všech koutech Vysočiny.
-              </div>
-          </div>
-          <span>©2023 pecujemeohroby.cz | Pečlivě se staráme o hroby, výzdobu i okolní prostředí
-               | PEČUJEMEoHROBY.cz, Jižní 1918, Havlíčkův Brod 580 01</span>
+   <footer class="footer-background ">
+      <div class="center-page-content">
+         <div class="footer-nahore">
+            <div class="footer-odkazy">
+                  <h5>Důležité odkazy</h5>
+                  <a href="#">Ochrana osobních údajů</a><br>
+                  <a href="#">Podmínky použití</a><br>
+                  <a href="#">Cookies</a>
+            </div>
+            <div class="footer-vpravo">
+                  <h5>PEČUJEMEoHROBY.cz</h5>
+                  <div class="footer-text">
+                     Péči o hroby se věnujeme s úctou, pokorou a závazkem 
+                     kvality ve všech koutech Vysočiny.
+                  </div>
+            </div>
+         </div>
+         <div class="footer-dole">
+            <span >©2023 pecujemeohroby.cz | Pečlivě se staráme o hroby, výzdobu i okolní prostředí
+                  | PEČUJEMEoHROBY.cz, Jižní 1918, Havlíčkův Brod 580 01</span>
+         </div>
       </div>
    </footer>
 </body>
