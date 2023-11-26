@@ -592,6 +592,8 @@ header{
       text-decoration: none;
       font-size: 1rem;
       font-weight: 400;
+      display: inline-block;
+      padding: 2rem 6rem;
    }
 
 
@@ -630,32 +632,32 @@ header{
       margin: 1rem auto 0 auto;
    }
 
-   .form--dark
+.label-dark{
+   margin-top: 2rem;
+   color: var(--font-color);
+   font-size: 1.25rem;
+   font-weight: 300;
+   
+}
 
-
-   .input-label, .checkbox-label{
-      margin-top: 2rem;
-      color: var(--font-color-light);
-      font-size: 1.5rem;
-      font-weight: 300;
-      
-      &:first-child{
-         margin-top: 0;
-      }
+.input-label, .checkbox-label, .label-dark{
+   margin-top: 2rem;
+   font-size: 1.5rem;
+   font-weight: 300;
+   
+   &:first-child{
+      margin-top: 0;
    }
+}
 
-   .input-label--dark{
-      color: var(--font-color);
-      font-size: 1.25rem;
-      font-weight: 300;
-      margin-top: 1rem;
-   }
-      
+.input-label{
+   color: var(--font-color-light);
+}
 
    .input{
       margin-top: 0.5rem;
       border-radius: 0.625rem;
-      background: var(--background-color);
+      background: #ffffff;
       font-size: 1.125rem;
       color: var(--font-color);
       padding: 0.825rem 0.5rem 0.5rem 0.5rem;
@@ -663,13 +665,13 @@ header{
    }
 
    .input--white{
-      background: #ffffff;
       border: 0.125rem solid var(--primary-color);
    }
 
    .checkbox-label{
       display: flex;
       gap: 0.5rem;
+      color: var(--font-color-light);
       margin: 2rem auto 1rem auto;
       font-size: 1rem;
       cursor: pointer;
