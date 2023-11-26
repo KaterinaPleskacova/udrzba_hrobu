@@ -49,6 +49,13 @@ header{
    margin:0;
 }
 
+
+.center-page-content{
+   width: 72.5rem;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
 /*navigace a background image pod navigací na některých stránkách*/
 
 .main-nav {
@@ -57,8 +64,12 @@ header{
    height: 4.8rem;
    position:sticky;
    top:0;
-   display: flex;
-   justify-content: space-between;
+
+
+   .nav-wrapper{
+      display: flex;
+      justify-content: space-between;
+   }
 }
 
 .nav > a {
@@ -77,7 +88,6 @@ header{
       display:flex;
       margin-top: 0.5rem;
       align-items: center;
-      margin-left: 7rem;
    }
 /*???????????????nastavit velikost loga, aby se nezmenšovalo*/
    .logo-img{
@@ -89,7 +99,6 @@ header{
 
    .nav-vpravo{
       display: flex;
-      margin-right: 8.75rem;
       margin-top: 0.5rem;
       align-items: center;
       justify-content: space-between;
@@ -98,7 +107,7 @@ header{
    }
 
 .header-background{
-   background-image: url(../assets/banner.jpg);
+   background-image: url('../assets/banner.jpg');
    height: 12.875rem;
    position:relative;
    background-size:cover;
@@ -134,8 +143,8 @@ header{
    margin-bottom: 2rem;
 }
 
-.page-header{
-   margin-top: 4.5rem;
+.header-with-padding{
+   padding-top: 9.25rem;
 }
 
 .index-hlavni-text{
@@ -202,7 +211,7 @@ header{
          margin-top: 2.75rem;
       }
 
-      .ctverec{
+      .ctverec, .ctverec--no-margin{
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -216,6 +225,7 @@ header{
       .ctverec:nth-child(2n) {
          margin-right: 0;
        }
+
          .img-ctverec{
             margin-top: 1.75rem;
             margin-bottom: 2rem;
@@ -230,35 +240,97 @@ header{
             width: 12.5rem;
             margin-bottom: 1rem;
          }
+
+      .ctverec-hnedy{
+         background-color: var(--rectangle-brown);
+         color: var(--font-color-light);
+
+         .hnedy-nadpis{
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            letter-spacing: 0.06rem;
+            display: inline-block;
+            margin-top: 2.62rem;
+            margin-bottom: 1rem;
+         }
+
+         .hnedy-text{
+            font-size: 1.375rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+            display: inline-block;
+            width: 14.375rem;
+            text-align: center;
+            
+         }
+
+         .hnedy-posledni{
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            display: inline-block;
+            margin-top: 2.62rem;
+            width: 14.375rem;
+         }
+      }
+
+      .ctverec-svetly{
+         background: rgba(227, 244, 224, 0.50);
+         display: flex;
+         justify-content: center;
+         margin-right: 2.75rem;
+         align-items: center;
+         
+      }
+
+   .text-ctverec-hnedy{
+      width: 14.375rem;
+   }
    
    .ctverce-vpravo{
       display: flex;
       flex-direction: column;
       margin-left: 5.375rem;
+      margin-top: 8rem;
    }
-      .index-subheader{
-         font-family: 'Judson', serif;
-         font-size: 3.125rem;
-         font-weight: 700;
-         display: inline-block;
-         width: 25rem;
-      }
+   .index-subheader{
+      font-family: 'Judson', serif;
+      font-size: 3.125rem;
+      font-weight: 700;
+      display: inline-block;
+      width: 25rem;
+   }
 
-      .chci-objednat{
-         display: inline-block;
-         width: 25rem;
-         height: 3.875rem;
-         background-color: var(--primary-color);
-         border-radius: 1.875rem;
-         font-size: 1.875rem;
-         color: var(--font-color-light);
-         text-align: center;
-         margin-top: 4rem;
-         text-decoration: none;
-         padding-top: 1rem;
-         padding-bottom:1rem;
+   .chci-objednat{
+      display: inline-block;
+      width: 25rem;
+      height: 3.875rem;
+      background-color: var(--primary-color);
+      border-radius: 1.875rem;
+      font-size: 1.875rem;
+      color: var(--font-color-light);
+      text-align: center;
+      margin-top: 4rem;
+      text-decoration: none;
+      padding-top: 1rem;
+      padding-bottom:1rem;
 
-      }
+   }
+
+   .chci-objednat-with-margin{
+      margin-top: 4.75rem;
+      margin-bottom: 9rem;
+   }
+
+   .chci-objednat-with-small-margin{
+      margin-top: 3.5rem;
+      margin-bottom: 2.75rem;
+      
+   }
+
+   .call-to-action{
+      text-align: center;
+   }
 
 /*sekce pruh s textem*/
 
@@ -318,6 +390,10 @@ header{
          width: 30rem;
       }
 
+      .sekce-spodni--cenik{
+         margin-top: 3.5rem;
+      }
+
 /*footer*/
 
 .footer-background{
@@ -336,8 +412,6 @@ header{
 
    .footer-nahore{
       display: flex;
-      margin-left: 7rem;
-      margin-right: 7rem;
       gap: 27.125rem;
       margin-bottom: 1.5rem;
    }
@@ -376,11 +450,11 @@ header{
 /*sluzby a cenik*/
 
 .page-wrapper{
-   margin: 4.5rem 7rem;
+   margin: 2rem auto;
 }
 
    .page-header{
-      margin:0;
+      margin: 0;
    }
 
    .page-doplnujici-text{
@@ -393,16 +467,85 @@ header{
       font-size: 2.5rem;
       font-weight: 700;
       margin-top: 3.5rem;
+      margin-bottom: 2rem;
    }
 
    .sluzby-seznam{
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 2.5rem;
+      margin-top: 2rem;
+
+      > ul{
+         list-style-type: none;
+         margin-left: 6.25rem;
+         padding-left: 1.5rem;
+      }
+
+      .custom-arrow li::before{
+         content: "\2192";
+         margin-right: 0.875rem;
+         color: var(--font-color);
+      }
    }
 
+   .sluzby-druh{
+      margin-top: 3.5rem;
+
+      .sluzby-h3{
+         font-family: 'Judson', serif;
+         font-size: 2rem;
+         font-weight: 700;
+         margin-top: 3.5rem;
+      }
+
+   }
+
+   .pruh-cenik{
+      background-color: rgba(255, 255, 255, 0.5);
+      background-image: url('../assets/ruka-v-hline-1440x762.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: lighten;
+      display: flex;
+   }
+
+   .text-ceny{
+      
+      flex-direction: column;
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 2.25rem;
+      width: 31rem;
+   }
+
+/*jak to funguje*/
+
+.jak-to-funguje-wrapper{
+   background-image: url(../assets/red-candle-4328867_1280.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: rgba(255, 255, 255, 0.5);
+   background-blend-mode: lighten;
+}
+
+.ctverce{
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.header--small-margin{
+   margin-top: 2rem;
+}
 
 
+/*galerie*/
+
+.fotky-prace{
+   display: flex;
+   flex-direction: column;
+}
 
 
 /*login, register, nova objednávka, password recovery*/
@@ -523,7 +666,7 @@ header{
    }
 
    .under-form-links{
-      margin: 3.5rem auto 16.5rem auto;
+      margin: 2.5rem auto 16.5rem auto;
       text-align: center;
    }
 
