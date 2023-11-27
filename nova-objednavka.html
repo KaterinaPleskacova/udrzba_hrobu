@@ -4,52 +4,66 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Nová objednávka | PEČUJEMEoHROBY.CZ</title>
+   <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-   <div class="wrapper">
+<body class="form-background">
+   <div>
       <header>
-          <a href="muj-ucet.html">Zpět na Můj účet</a>
-          <h1 class="form-header">Nová objednávka</h1>
+         <a href="muj-ucet.html" class="zpet">Zpět na Můj účet</a>
+         <h1 class="form-header">Nová objednávka</h1>
       </header>
-
+   
       <main>
          <div class="message message--error">
-              Něco se pokazilo!
+               Něco se pokazilo!
          </div>
          <div class="message message--success">
-              Objednávka byla úspěšně odeslána!
+               Objednávka byla úspěšně odeslána!
          </div>
-         <form action="nova-objednavka.html" method="post">
-            <div class="form-vlevo">
-               <label for="first-name" class="input-label">Vaše křestní jméno</label>
-               <input type="text" name="krestni-name" id="krestni-jmeno" class="input" required>
-               <label for="last-name" class="input-label">Vaše příjmení</label>
-               <input type="text" name="last-nme" id="last-name" class="input" required>
-               <label for="email" class="input-label">Váš email</label>
-               <input type="email" name="email" id="email class="input" required>
-               <label for="phone" class="input-label">Vaše telefonní číslo</label>
-               <input type="number" name="phone" id="phone" class="input">
-               <label for="service" class="input-label">Jakou službu jste vybrali</label>
-               <select name="service" id="service" class="select" required>
-                 <option value="ctyrikrat" class="option">Pravidelná péče (4x za rok)</option>
-                 <option value="sestkrat" class="option">Pravidelná péče (6x za rok)</option>
-                 <option value="jednou" class="option">Jednorázová péče</option>
-                 <option value="other" class="option">Jiné (prosím upřesněte v poznámce)</option>
-               </select>
+         <form action="nova-objednavka.html" method="post" class="form-order">
+            <div class="form-inputs">
+               <div class="inputs-vpravo">
+                  <label for="first-name" class="input-label">Vaše křestní jméno</label>
+                  <input type="text" name="krestni-name" id="krestni-jmeno" class="input" required>
+   
+                  <label for="last-name" class="input-label">Vaše příjmení</label>
+                  <input type="text" name="last-nme" id="last-name" class="input" required>
+   
+                  <label for="email" class="input-label">Váš email</label>
+                  <input type="email" name="email" id="email" class="input" required>
+   
+                  <label for="phone" class="input-label">Vaše telefonní číslo</label>
+                  <input type="number" name="phone" id="phone" class="input">
+   
+                  <label for="service" class="input-label">Jakou službu jste vybrali</label>
+                  <select name="service" id="service" class="input" required>
+                     <option value="ctyrikrat" class="option">Pravidelná péče (4x za rok)</option>
+                     <option value="sestkrat" class="option">Pravidelná péče (6x za rok)</option>
+                     <option value="jednou" class="option">Jednorázová péče</option>
+                     <option value="other" class="option">Jiné (prosím upřesněte v poznámce)</option>
+                  </select>
+               </div>
+               <div class="inputs-vpravo">
+                  <label for="hrob" class="input-label">Velikost hrobu</label>
+                  <select name="hrob" id="hrob" class="input" required>
+                     <option value="klasicky" class="option">Klasický hrob</option>
+                     <option value="dvojhrob" class="option">Dvoj hrob</option>
+                     <option value="urnovy" class="option">Urnový hrob</option>
+                     <option value="other" class="option">Jiné (prosím upřesněte v poznámce)</option>
+                  </select>
+   
+                  <label for="hrbitov" class="input-label">Na který hřbitov pojedeme</label>
+                  <input type="text" name="hrbitov" id="hrbitov" class="input" required>
+   
+                  <label for="message" class="input-label">Další poznámky pro nás</label>
+                  <textarea name="message" id="message" cols="30" rows="12" class="input"></textarea>
+               </div>
             </div>
-            <div class="form-vpravo">
-               <label for="hrob" class="input-label">Velikost hrobu</label>
-               <input type="text" name="hrob" id="hrob class="input">
-               <label for="hrbitov" class="input-label">Na který hřbitov pojedeme</label>
-               <input type="text" name="hrbitov" id="hrbitov class="input" required>
-               <label for="message" class="input-label">Další poznámky pro nás</label>
-               <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="form-submit">
+               <input type="submit" value="Odeslat objednávku" class="button button--center">
             </div>
-            <input type="submit" value="Odeslat objednávku" class="button button--center">
          </form>
       </main>
-
-  </div>
-
+   </div>
 </body>
 </html>

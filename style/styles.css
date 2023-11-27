@@ -34,15 +34,13 @@ img{
    max-width: 100%;
 }
 
-body, button, input, textarea {
+body, button, input, textarea, select {
    font-family: 'Josefin Sans', sans-serif;
 }
 
 body{
    background: var(--background-color);
    color: var(--font-color);
-   width: 100vw;
-   height: 100vh;
 }
 
 header{
@@ -174,7 +172,6 @@ header{
 
 .sekce-vpravo{
    margin-left: 9.375rem;
-   margin-right: 8.75rem;
 }
    
    .obrazek{
@@ -290,15 +287,23 @@ header{
    .ctverce-vpravo{
       display: flex;
       flex-direction: column;
-      margin-left: 5.375rem;
-      margin-top: 8rem;
+      margin-left: 10rem;
+      justify-content: center;
    }
+
+   .ctverce-vpravo-with-top-margin{
+      margin-top: 8rem;
+      justify-content: initial;
+      margin-left: 5.375rem;
+   }
+
    .index-subheader{
       font-family: 'Judson', serif;
       font-size: 3.125rem;
       font-weight: 700;
       display: inline-block;
       width: 25rem;
+      text-align: center;
    }
 
    .chci-objednat{
@@ -583,8 +588,11 @@ header{
 /*login, register, nova objednávka, password recovery*/
 
 .form-background{
-   background: linear-gradient(180deg, #31512B 0%, #1A0D02 100%);
-   
+   background-image: linear-gradient(180deg, #31512B 0%, #1A0D02 100%);
+   min-height: 100vh;
+   min-width: 100vw;
+   background-attachment: fixed;
+   background-size: cover;
 }
 
    .zpet{
@@ -593,7 +601,7 @@ header{
       font-size: 1rem;
       font-weight: 400;
       display: inline-block;
-      padding: 2rem 6rem;
+      padding: 4rem 6rem;
    }
 
 
@@ -630,6 +638,23 @@ header{
       flex-direction: column;
       width: 23.625rem;
       margin: 1rem auto 0 auto;
+   }
+
+   .form-order{
+      display:flex;
+      flex-direction: column;
+      margin: 1rem auto 0 auto;
+   }
+
+   .form-inputs{
+      display: flex;
+      gap:3.5rem;
+      justify-content: center;
+   }
+
+   .inputs-vlevo, .inputs-vpravo{
+      display: flex;
+      flex-direction: column;
    }
 
 .label-dark{
@@ -723,7 +748,7 @@ header{
    }
 
    .under-form-links{
-      margin: 2.5rem auto 16.5rem auto;
+      margin: 2.5rem auto 3.5rem auto;
       text-align: center;
    }
 
@@ -734,6 +759,109 @@ header{
          font-size: 1rem;
          font-weight: 400;
       }
+
+
+   .form-submit{
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      text-align: center;
+   }
+
+
+/*můj účet*/
+
+   .header-under{
+      background-color: var(--background-brown-dark);
+      height: 12.875rem;
+      color: #ffffff;
+      padding-top: 2rem;
+
+      .user-name, .user-email{
+         font-size: 2rem;
+         line-height: 2.5rem;
+      }
+
+      .user-profile{
+         font-size: 1.375rem;
+         display: inline-block;
+         margin-top: 2rem;
+
+         &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+         }
+      }
+   }
+
+   .small-header{
+      font-family: 'Judson', serif;
+      font-size: 2rem;
+      display: inline-block;
+      margin-top: 3.5rem;
+   }
+
+   .historie-subheader{
+      font-family: 'Judson', serif;
+      font-size: 1.5rem;
+      display: block;
+      border-bottom: 1px solid #000000;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+   }
+
+   .historie-subheader--galerie{
+      border: none;
+      cursor: default;
+      margin-bottom: 0;
+      margin-top: 1rem;
+   }
+
+   .historie-objednavek{
+      margin-bottom: 3.5rem;
+   }
+
+   .rozbalovaci-info-prvni, .rozbalovaci-info-treti, .rozbalovaci-info-paty{
+      background-color: var(--background-brown-light);
+      
+   }
+
+   .rozbalovaci-info-druhy, .rozbalovaci-info-ctvrty{
+      background-color: var(--background-green-light);
+   }
+
+   .popisek{
+      padding:1rem;
+
+   }
+   /*když se klikne na objednávku, tak se dolů rozbalí další informace o objednávce - udělám pomocí JS*/
+   .rozbalovaci-info{
+      display:none;
+   }
+
+   /*moje galerie*/
+
+   .objednavky-radek{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #000000;
+   }
+
+   .button-small{
+      text-decoration: none;
+      font-size: 1.125rem;
+      margin-top:1rem;
+      margin-bottom: 0.5rem;
+
+      &:hover{
+         text-decoration: underline;
+      }
+   }
+
+   .objednavky{
+      margin-bottom: 10rem;
+   }
 
 
 
