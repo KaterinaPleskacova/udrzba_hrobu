@@ -19,6 +19,7 @@
    --background-brown-dark: #1A0D02CC;
    --background-brown-light: #1A0D0233;
    --background-green-light: #31512B33;
+   --backdrop-color: #E3F4E033;
 
    --gradient-dark: #1A0D02;
    --gradient-light: #31512B;
@@ -588,7 +589,7 @@ header{
 /*login, register, nova objednávka, password recovery*/
 
 .form-background{
-   background-image: linear-gradient(180deg, #31512B 0%, #1A0D02 100%);
+   background-image: linear-gradient(180deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
    min-height: 100vh;
    min-width: 100vw;
    background-attachment: fixed;
@@ -862,6 +863,37 @@ header{
    .objednavky{
       margin-bottom: 10rem;
    }
+
+
+/*vyskakovací dialogové okno*/
+
+.dialog{
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 1.875rem;
+   width: 36.25rem;
+   max-width: 100%;
+   background-image: linear-gradient(180deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
+   border: none;
+   padding: 1.75rem 3.5rem;
+}
+
+.open-dialog{
+   cursor: pointer;
+
+   &:hover{
+      text-decoration: underline;
+   }
+}
+
+.close-dialog-wrapper{
+   text-align: right;
+}
+
+.close-dialog{
+   cursor: pointer;
+}
 
 
 
