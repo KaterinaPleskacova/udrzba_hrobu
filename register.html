@@ -20,7 +20,7 @@
          <div class="message message--success">
             Akce proběhla úspěšně!
          </div>
-        <form action="register.html" method="post" class="form">
+        <form name="register" action="register.html" method="post" class="form" onsubmit="return validateForm('register')" novalidate>
             <label for="email" class="input-label">Email</label>
             <input type="email" name="email" id="email" class="input" required>
             <label for="password" class="input-label">Heslo</label>

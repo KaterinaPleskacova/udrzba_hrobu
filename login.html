@@ -20,7 +20,7 @@
         <div class="message message--success">
            Akce proběhla úspěšně!
         </div>
-        <form action="login.html" method="post" class="form">
+        <form name="login" action="login.html" method="post" class="form" onsubmit="return validateForm('login')" novalidate>
 
             <label for="email" class="input-label">Email</label>
             <input type="email" name="email" id="email" class="input" required>
