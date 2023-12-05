@@ -1,3 +1,4 @@
+// Dialogy
 function handleDialogOpen () {
    const openDialogElements = document.getElementsByClassName('open-dialog');
 
