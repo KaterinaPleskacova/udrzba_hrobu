@@ -688,6 +688,14 @@ header{
       color: var(--font-color);
       padding: 0.825rem 0.5rem 0.5rem 0.5rem;
       border: 0;
+
+      &:disabled {
+         opacity: 0.75;
+      }
+
+/*      &:invalid {
+         border: 1px solid var(--font-error);
+      }*/
    }
 
    .input--white{
