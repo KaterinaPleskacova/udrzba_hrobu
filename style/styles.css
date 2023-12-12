@@ -846,7 +846,7 @@ header{
    }
    /*když se klikne na objednávku, tak se dolů rozbalí další informace o objednávce - udělám pomocí JS*/
    .rozbalovaci-info{
-      display:none;
+      /*display:none;*/
    }
 
    /*moje galerie*/
