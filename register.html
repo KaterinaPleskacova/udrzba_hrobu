@@ -21,6 +21,8 @@
             Akce proběhla úspěšně!
          </div>
         <form name="register" action="register.html" method="post" class="form" onsubmit="return validateForm('register')" novalidate>
+            <label for="name" class="input-label">Jméno a příjmení</label>
+            <input type="text" name="name" id="name" class="input" required>
             <label for="email" class="input-label">Email</label>
             <input type="email" name="email" id="email" class="input" required>
             <label for="password" class="input-label">Heslo</label>
