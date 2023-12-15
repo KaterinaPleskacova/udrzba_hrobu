@@ -49,7 +49,7 @@ function funcWithCallbackTwo(Closure $callback): void
     call_user_func($callback);
 }
 
-$helloWorld = function (): void
+function helloWorld(): void
 {
     echo "<br /> Hello World!!";
 };
@@ -77,13 +77,13 @@ writeName(randomName());
 
 echo "<br /><br />";
 
-funcWithCallback($helloWorld);          //jakmile jsme předali callable funkci, tak se nespustila samotná funkce uložená
+funcWithCallback("helloWorld");          //jakmile jsme předali callable funkci, tak se nespustila samotná funkce uložená
                                         //v proměnné $helloWorld, ale ukázali jsme na ní, aby si to funkce funcWithCallback
                                         //mohla vzít, provést nějaký výpočet a až je výpočet hotový, zavolala to zpětné volání
                                         // a až když se dostane k místu, kde voláme $callback dostane, provede se funkce uložená
                                         //v proměnné $helloWorld
 
-funcWithCallbackTwo(Closure::fromCallable($helloWorld));
+funcWithCallbackTwo(Closure::fromCallable("helloWorld"));
 
 $function = higherOrderReturn();
 
