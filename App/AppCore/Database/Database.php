@@ -31,7 +31,7 @@ class Database
         }
     }
 
-    public function __destuct()
+    public function __destruct()
     {
         $this->connection = null;
     }
