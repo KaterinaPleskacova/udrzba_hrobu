@@ -106,7 +106,7 @@ header{
    }
 
 .header-background{
-   background-image: url('../assets/banner.jpg');
+   background-image: url('../images/banner.jpg');
    height: 12.875rem;
    position:relative;
    background-size:cover;
@@ -344,7 +344,7 @@ header{
 .sekce-pruh{
    height: 21rem;
    position: relative;
-   background-image: url('../assets/banner2.jpg');
+   background-image: url('../images/banner2.jpg');
    background-size:cover;
    background-position: center;
    display: flex;
@@ -513,7 +513,7 @@ header{
 
    .pruh-cenik{
       background-color: rgba(255, 255, 255, 0.5);
-      background-image: url('../assets/ruka-v-hline-1440x762.jpg');
+      background-image: url('../images/ruka-v-hline-1440x762.jpg');
       background-size: cover;
       background-position: center;
       background-blend-mode: lighten;
@@ -532,7 +532,7 @@ header{
 /*jak to funguje*/
 
 .jak-to-funguje-wrapper{
-   background-image: url(../assets/red-candle-4328867_1280.jpg);
+   background-image: url(../../../assets/red-candle-4328867_1280.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-color: rgba(255, 255, 255, 0.5);
