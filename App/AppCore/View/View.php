@@ -9,7 +9,7 @@ class View
 
     /**
      * @param string $template - název šablony
-     * @param array $data - data, která budou zobrazena v šabloně - aosciativní pole
+     * @param array $data - data, která budou zobrazena v šabloně - aosciativní pole ['title' => 'Přihlášení']
      */
     public function __construct(
         private readonly string $template,
@@ -20,7 +20,7 @@ class View
 
     public function render(): void
     {
-        $templateFile = __APP_ROOT__ . 'App/Views/' . $this->template . 'php';
+        $templateFile = __APP_ROOT__ . getenv('APP_PRIVATE_SUB_FOLDERS') . 'App/Views/' . $this->template . '.php';
 
         if(file_exists($templateFile)) {
             require $templateFile;
