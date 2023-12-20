@@ -10,6 +10,6 @@ class HomepageController
 {
     public function index(): void
     {
-        View::make('Homepage');
+        View::make('Homepage', ['title' => 'Hlavní stránka']);
     }
 }
