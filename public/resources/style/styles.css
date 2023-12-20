@@ -532,7 +532,7 @@ header{
 /*jak to funguje*/
 
 .jak-to-funguje-wrapper{
-   background-image: url(../../../assets/red-candle-4328867_1280.jpg);
+   background-image: url('../images/red-candle-4328867_1280.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-color: rgba(255, 255, 255, 0.5);
