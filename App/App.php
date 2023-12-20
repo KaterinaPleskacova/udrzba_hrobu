@@ -9,7 +9,10 @@ use App\AppCore\Exceptions\RouteNotFoundException;
 use App\AppCore\Routing\Router;
 use App\AppCore\Utils\EnvParser;
 use App\AppCore\View\View;
+use App\Controllers\GalerieController;
+use App\Controllers\JakToFungujeController;
 use App\Controllers\RegisterController;
+use App\Controllers\SluzbyACenikController;
 use App\Routes\Routes;
 use Closure;
 use App\Controllers\HomepageController;
@@ -42,6 +45,12 @@ class App {
         $this->router
             ->get(Routes::Register, [RegisterController::class, 'create'])
             ->post(Routes::Register, [RegisterController::class, 'store']);
+
+        $this->router->get(Routes::SluzbyACenik, [SluzbyACenikController::class, 'index']);
+
+        $this->router->get(Routes::JakToFunguje, [JakToFungujeController::class, 'index']);
+
+        $this->router->get(Routes::Galerie, [GalerieController::class, 'index']);
     }
 
     public function run(): void
