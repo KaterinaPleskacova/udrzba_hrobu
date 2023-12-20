@@ -21,11 +21,11 @@ include "Components/HtmlHeadForms.php";
         <div class="message message--success">
             Akce proběhla úspěšně!
         </div>
-        <form name="register" action="register.html" method="post" class="form" onsubmit="return validateForm('register')" novalidate>
+        <form name="register" action="<?= Url::create(Routes::Register)?>" method="post" class="form" onsubmit="return validateForm('register')" novalidate>
             <label for="name" class="input-label">Jméno a příjmení</label>
-            <input type="text" name="name" id="name" class="input" required>
+            <input type="text" name="name" id="name" class="input" value="<?= isset($this->data['formData']) ? $this->data['formData']['name'] : '' ?>" required>
             <label for="email" class="input-label">Email</label>
-            <input type="email" name="email" id="email" class="input" required>
+            <input type="email" name="email" id="email" class="input" value="<?= isset($this->data['formData']) ? $this->data['formData']['email'] : '' ?>" required>
             <label for="password" class="input-label">Heslo</label>
             <input type="password" name="password" id="password" class="input" required>
             <label for="confirm-password" class="input-label">Heslo znovu</label>
@@ -37,7 +37,7 @@ include "Components/HtmlHeadForms.php";
             <input type="submit" value="Vytvořit účet" class="button button--center">
         </form>
         <div class="under-form-links">
-            <span class="panel-link">Máte účet? <a href="login.html" class="open-dialog link">Přihlaste se!</a></span>
+            <span class="panel-link">Máte účet? <a href="<?= Url::create(Routes::Login)?>" class="open-dialog link">Přihlaste se!</a></span>
         </div>
     </main>
 
