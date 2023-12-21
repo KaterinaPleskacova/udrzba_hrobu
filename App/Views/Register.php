@@ -14,18 +14,32 @@ include "Components/HtmlHeadForms.php";
     </header>
 
     <main>
-        <div class="message message--error">
-            Pod tímto emailem účet již existuje.<br>
-            <span class="open-dialog" data-dialog="forgotten-password">Zapomněli jste heslo?</span>
-        </div>
-        <div class="message message--success">
-            Akce proběhla úspěšně!
-        </div>
+
+        <?php
+        if (isset($this->data['errorMessage'])) {
+            echo '<div class="message message--error">';
+            switch ($this->data['errorMessage']) {
+                case 'userRegistered':
+                    echo 'Pod tímto emailem účet již existuje. Zapomněli jste heslo?';
+                    break;
+                case 'password':
+                    echo 'Heslo musí obsahovat číslici, velké a malé písmeno a musí mít nejméne 8 znaků.';
+                    break;
+                case 'confirmPassword':
+                    echo 'Zadaná hesla se neshodují.';
+                    break;
+                default:
+                    echo 'Vytvoření účtu se nezdařilo, prosím zkontrolujte vyplněné údaje.';
+            }
+            echo '</div>';
+        }
+        ?>
+
         <form name="register" action="<?= Url::create(Routes::Register)?>" method="post" class="form" onsubmit="return validateForm('register')" novalidate>
-            <label for="name" class="input-label">Jméno a příjmení</label>
-            <input type="text" name="name" id="name" class="input" value="<?= isset($this->data['formData']) ? $this->data['formData']['name'] : '' ?>" required>
             <label for="email" class="input-label">Email</label>
             <input type="email" name="email" id="email" class="input" value="<?= isset($this->data['formData']) ? $this->data['formData']['email'] : '' ?>" required>
+            <label for="name" class="input-label">Jméno a příjmení</label>
+            <input type="text" name="name" id="name" class="input" value="<?= isset($this->data['formData']) ? $this->data['formData']['name'] : '' ?>" required>
             <label for="password" class="input-label">Heslo</label>
             <input type="password" name="password" id="password" class="input" required>
             <label for="confirm-password" class="input-label">Heslo znovu</label>
@@ -62,3 +76,6 @@ include "Components/HtmlHeadForms.php";
             <input type="submit" value="Obnovit zapomenuté heslo" class="button button--center-with-margin">
         </form>
     </dialog>
+
+<?php
+include "Components/HtmlFoot.php";
