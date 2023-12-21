@@ -4,14 +4,19 @@ declare(strict_types=1);
 
 namespace App\Validations;
 
-class RegisterValidation
+class PasswordRecoveryValidation
 {
-    public static function validate(array $data): true|string
+    public static function validateRecoveryRequest(array $data): true|string
     {
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL) || strlen($data['name']) === 0) {
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             return 'error';
         }
 
+        return true;
+    }
+
+    public static function validateNewPassword(array $data): true|string
+    {
         if (preg_match(
                 '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/',
                 $data['password']) === false) {
@@ -20,10 +25,6 @@ class RegisterValidation
 
         if ($data['password'] !== $data['confirm-password']) {
             return 'confirmPassword';
-        }
-
-        if (!isset($data['terms'])) {
-            return 'error';
         }
 
         return true;
