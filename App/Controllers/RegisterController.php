@@ -51,7 +51,7 @@ class RegisterController extends Controller
             } else {
                 $this->model->createUser(
                     $sanitizedData['email'],
-                    $sanitizedData['name'],
+                    $sanitizedData['username'],
                     password_hash($sanitizedData['password'], PASSWORD_BCRYPT)
                 );
 
@@ -59,7 +59,7 @@ class RegisterController extends Controller
                 Email::send(
                     $sanitizedData['email'],
                     getenv('APP_EMAIL'),
-                    'Registrace proběhla úspěšně',
+                    'PEČUJEMEoHROBY.EU - Registrace',
                     'Dobrý den, vytvoření Vašeho účtu na stránce PEČUJEMEoHROBY.eu bylo úspěšné :)'
                 );
                 Url::redirect(Routes::Login);

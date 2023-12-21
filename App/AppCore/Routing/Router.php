@@ -25,7 +25,7 @@ class Router
         $this->routes = [];
     }
 
-    // Soukromá metoda pro test, zda se cesta už zaregistrovaná
+    // Soukromá metoda pro test, zda je cesta už zaregistrovaná
     private function routeExists(string $route, HttpMethod $method): bool
     {
         foreach ($this->routes as $currentRoute) {

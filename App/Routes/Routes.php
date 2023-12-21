@@ -12,8 +12,8 @@ enum Routes: string
     case RequestPasswordRecovery = '/reset-hesla/zadost';
     case PasswordRecovery = '/reset-hesla/{token}';
     case Register = '/vytvorit-ucet';
-    case MujUcet = '/můj účet';
-    case MojeGalerie = '/moje galerie';
+    case MujUcet = '/muj-ucet';
+    case MojeGalerie = '/moje-galerie';
     case NovaObjednavka = '/nova-objednavka';
     case SluzbyACenik = '/sluzby-a-cenik';
     case JakToFunguje = '/jak-to-funguje';

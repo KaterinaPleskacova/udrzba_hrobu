@@ -1,0 +1,70 @@
+<?php
+
+use App\AppCore\Routing\Url;
+use App\Routes\Routes;
+
+include "Components/HtmlHeadForms.php";
+
+?>
+
+<div>
+      <header>
+         <a href="<?= Url::create(Routes::MujUcet)?>" class="zpet">Zpět na Můj účet</a>
+         <h1 class="form-header">Nová objednávka</h1>
+      </header>
+
+      <main>
+         <div class="message message--error">
+            Něco se pokazilo!
+         </div>
+         <div class="message message--success">
+            Objednávka byla úspěšně odeslána!
+         </div>
+         <form action="<?= Url::create(Routes::NovaObjednavka)?>" method="post" class="form-order">
+            <div class="form-inputs">
+               <div class="inputs-vpravo">
+                  <label for="first-name" class="input-label">Vaše křestní jméno</label>
+                  <input type="text" name="first-name" id="first-name" class="input" required>
+
+                  <label for="last-name" class="input-label">Vaše příjmení</label>
+                  <input type="text" name="last-name" id="last-name" class="input" required>
+
+                  <label for="email" class="input-label">Váš email</label>
+                  <input type="email" name="email" id="email" class="input" required>
+
+                  <label for="phone" class="input-label">Vaše telefonní číslo</label>
+                  <input type="number" name="phone" id="phone" class="input">
+
+                  <label for="service" class="input-label">Jakou službu jste vybrali</label>
+                  <select name="service" id="service" class="input" required>
+                     <option value="ctyrikrat" class="option">Pravidelná péče (4x za rok)</option>
+                     <option value="sestkrat" class="option">Pravidelná péče (6x za rok)</option>
+                     <option value="jednou" class="option">Jednorázová péče</option>
+                     <option value="other" class="option">Jiné (prosím upřesněte v poznámce)</option>
+                  </select>
+               </div>
+               <div class="inputs-vpravo">
+                  <label for="hrob" class="input-label">Velikost hrobu</label>
+                  <select name="hrob" id="hrob" class="input" required>
+                     <option value="klasicky" class="option">Klasický hrob</option>
+                     <option value="dvojhrob" class="option">Dvoj hrob</option>
+                     <option value="urnovy" class="option">Urnový hrob</option>
+                     <option value="other" class="option">Jiné (prosím upřesněte v poznámce)</option>
+                  </select>
+
+                  <label for="hrbitov" class="input-label">Na který hřbitov pojedeme</label>
+                  <input type="text" name="hrbitov" id="hrbitov" class="input" required>
+
+                  <label for="message" class="input-label">Další poznámky pro nás</label>
+                  <textarea name="message" id="message" cols="30" rows="12" class="input"></textarea>
+               </div>
+            </div>
+            <div class="form-submit">
+               <input type="submit" value="Odeslat objednávku" class="button button--center">
+            </div>
+         </form>
+      </main>
+   </div>
+
+<?php
+include "Components/HtmlFoot.php";

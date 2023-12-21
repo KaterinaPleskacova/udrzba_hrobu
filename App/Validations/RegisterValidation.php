@@ -8,7 +8,7 @@ class RegisterValidation
 {
     public static function validate(array $data): true|string
     {
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL) || strlen($data['name']) === 0) {
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL) || strlen($data['username']) === 0) {
             return 'error';
         }
 

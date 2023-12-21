@@ -6,10 +6,10 @@ namespace App\Controllers;
 
 use App\AppCore\View\View;
 
-class KontaktController
+class AppErrorController
 {
     public function index(): void
     {
-        View::make('Kontakt', ['title' => 'Kontakt']);
+        View::make('AppError', ['title' => 'Došlo k chybě!']);
     }
 }
