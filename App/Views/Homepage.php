@@ -9,7 +9,6 @@ include "Components/HtmlNavigationOnly.php"
 ?>
 
     <main class="center-page-content">
-        <div class="page-wrapper">
             <section class="sekce-prvni">
                 <div class="sekce-vlevo">
                     <p class="maly-nadpis">Péče o hroby na Vysočině<p>
@@ -72,7 +71,6 @@ include "Components/HtmlNavigationOnly.php"
                     <a href="<?= Url::create(Routes::Register)?>" class="chci-objednat">Chci objednat službu</a>
                 </div>
             </section>
-        </div>
         <section class="sekce-pruh">
             <div class="sekce-prusvitnost">
             </div>
@@ -81,29 +79,28 @@ include "Components/HtmlNavigationOnly.php"
                 zemřelých a s cílem zajistit, že hrob je vždy v perfektním stavu.
             </div>
         </section>
-        <div class="page-wrapper">
-            <section class="sekce-spodni">
-                <div class="sekce-vlevo">
-                    <h2 class="index-subheader index-subheader--wide">Nejste si jisti, jestli naše služby potřebujete?</h2>
-                    <p class="index-hlavni-text index-hlavni-text--wide">Věříme, že ano. Dostáváte se do situací, kdy byste chtěli místa posledního
-                        odpočinku vašich blízkých navštívit, ale nemáte možnost? Chtěli byste obnovit výzdobu, zapálit
-                        svíčku a postarat se o to, aby prostředí celkově dobře vypadalo? Pokud vám vzdálenost, věk nebo
-                        zdravotní stav nedovoluje takové návštěvy vykonávat, jsme tu my, abychom se o vše potřebné postarali.</p>
-                    <div class="doplnujici-text doplnujici-text--wide">
-                        <svg width="6" height="141" viewBox="0 0 6 141" fill="none" xmlns="http://www.w3.org/2000/svg" class="cara">
-                            <line x1="1.99993" y1="0.982759" x2="3.20678" y2="140.978" stroke="#31512B" stroke-width="4"/>
-                        </svg>
-                        <p class="doplnujici-text doplnujici-text--wide">S námi máte jistotu, že místo památky na vaše blízké bude vždy v
-                            nejlepším pořádku. Jsme tu, abychom vám pomohli uchovat a uctít vzpomínky na vaše blízké
-                            ve dnech svátečních i všedních.
-                        </p>
-                    </div>
+        <section class="sekce-spodni">
+            <div class="sekce-vlevo">
+                <h2 class="index-subheader index-subheader--wide">Nejste si jisti, jestli naše služby potřebujete?</h2>
+                <p class="index-hlavni-text index-hlavni-text--wide">Věříme, že ano. Dostáváte se do situací, kdy byste chtěli místa posledního
+                    odpočinku vašich blízkých navštívit, ale nemáte možnost? Chtěli byste obnovit výzdobu, zapálit
+                    svíčku a postarat se o to, aby prostředí celkově dobře vypadalo? Pokud vám vzdálenost, věk nebo
+                    zdravotní stav nedovoluje takové návštěvy vykonávat, jsme tu my, abychom se o vše potřebné postarali.</p>
+                <div class="doplnujici-text doplnujici-text--wide">
+                    <svg width="6" height="141" viewBox="0 0 6 141" fill="none" xmlns="http://www.w3.org/2000/svg" class="cara">
+                        <line x1="1.99993" y1="0.982759" x2="3.20678" y2="140.978" stroke="#31512B" stroke-width="4"/>
+                    </svg>
+                    <p class="doplnujici-text doplnujici-text--wide">S námi máte jistotu, že místo památky na vaše blízké bude vždy v
+                        nejlepším pořádku. Jsme tu, abychom vám pomohli uchovat a uctít vzpomínky na vaše blízké
+                        ve dnech svátečních i všedních.
+                    </p>
                 </div>
-                <div class="sekce-vpravo sekce-vpravo-dole">
-                    <img src="<?= __APP_RESOURCES__?>images/muž-hřbitov-530x706.jpg" alt="muž odcházející ze hřbitova" class="obrazek">
-                </div>
-            </section>
-        </div>
+            </div>
+            <div class="sekce-vpravo sekce-vpravo-dole">
+                <img src="<?= __APP_RESOURCES__?>images/muž-hřbitov-530x706.jpg" alt="muž odcházející ze hřbitova" class="obrazek">
+            </div>
+        </section>
+
     </main>
 
 <?php

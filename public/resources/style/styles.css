@@ -166,6 +166,7 @@ header{
 
 .cara{
    margin-right: 1.25rem;
+   margin-left: 1.5rem;
 }
 
 .page-doplnujici-text{
@@ -406,6 +407,7 @@ header{
 .footer-background{
    background-color: var(--primary-color);
    height: 12.875rem;
+   margin-top: 4.75rem;
 }
 
    h5{
